@@ -14,14 +14,20 @@ print("Welcome to pypassword Generator")
 nr_letters = eval(input("Enter number of letters:"))
 nr_numbers = eval(input("Enter number of numbers:"))
 nr_symbols = eval(input("Enter number of symbols:"))
+#create an empty password list
 password = []
-password_list = []
+
+# randomly select letter password from the list of letters, numbers and symbols
 for letter in range(nr_letters):
   password += random.choice(alphabet)
 for number in range(nr_numbers):
   password += random.choice(numbers)
 for symbol in range(nr_symbols):
   password += random.choice(symbols)
+#shuffle list of  letters in the password 
 random.shuffle(password)
-print(password)
-#print(password_list)
+# join the strings together using the join command
+passgen = "".join(password)
+# print out result 
+print("Generated Password:", passgen)
+
