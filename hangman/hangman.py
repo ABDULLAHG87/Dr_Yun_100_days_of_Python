@@ -1,5 +1,6 @@
 import random
 
+
 def hangman():
     HANGMANPICS = ['''
     +---+
@@ -66,7 +67,6 @@ def hangman():
         for n,letter in enumerate(select_word):
             if guess == letter:
                 list_word[n] = letter
-                found = True
                 right_guess += 1
         if right_guess == len(select_word):
             print("Correct Guess: ", select_word)
@@ -80,7 +80,6 @@ def hangman():
             print("Game Over. You Lose")
             break
 
-
 welcome_msg ="""Welcome to 
  _                                             
 | |                                            
@@ -93,11 +92,10 @@ welcome_msg ="""Welcome to
                    """
 welcome_msg = welcome_msg.center(80)
 print(welcome_msg)
-
 print("Choose an Option for the Game")
 print("""
-1. Single Player with Timing
-2. Single Player without Timing """)
+  1. Single Player with Timing
+  2. Single Player without Timing """)
 while True:
   try:
     choice = int(input("Enter your choice:"))
